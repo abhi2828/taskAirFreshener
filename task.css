@@ -1,0 +1,73 @@
+.container{
+    margin-top: 100px;
+    width: 500px !important;
+    height: 500px;
+    border:20px solid transparent;
+    background: rgb(9,195,196);
+    background: linear-gradient(90deg, rgba(9,195,196,1) 7%, 
+    rgba(22,142,173,1) 51%, rgba(0,212,255,1) 81%);
+}
+.upperrow {
+    background-color: transparent;
+    
+}
+.upperrow > div{
+    height: 461px;
+ border:10px solid transparent;
+ width: 220px;
+}
+img{
+ width: 100%;
+ margin-top: 10px;
+}
+.col2{
+    background-color: white;
+    border-bottom-left-radius: 45px;
+    border-top-left-radius: 45px;
+    height: 450px;
+}
+.col3{
+    margin-top: -6px;
+    height: 228px;
+    background-color: white;
+    border-top-right-radius: 45px;
+    border-bottom: 10px solid transparent;
+ }
+ .internaldiv{
+     background: rgb(9,195,196);
+    background: linear-gradient(90deg, rgba(9,195,196,1) 7%, 
+    rgba(22,142,173,1) 51%, rgba(0,212,255,1) 81%);
+    border-top-right-radius: 45px;
+    height: 210px;
+    margin-top: 12px;
+ }
+.col4{
+    height: 228px;
+    background-color: white;
+    border-bottom-right-radius: 45px;
+    border-top: 10px solid transparent ;
+}
+.internaldiv2{
+ background: rgb(9,195,196);
+    background: linear-gradient(90deg, rgba(9,195,196,1) 7%, 
+    rgba(22,142,173,1) 51%, rgba(0,212,255,1) 81%);
+    border-bottom-right-radius: 45px;
+    height: 210px;
+    margin-top: -5px;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 66px;
+    color: yellow;
+}
+.offer{
+    font-size: 38px;
+    line-height: 41px;
+    padding-top: 36px !important;
+}
+span{
+    font-size: 55px;
+}
