@@ -58,18 +58,12 @@
 p{
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-size: 18px;
-    line-height: 21px;
-    padding-top: 66px;
     color: yellow;
 }
 .offer{
     font-size: 38px;
     line-height: 41px;
     padding-top: 36px !important;
-}
-span{
-    font-size: 55px;
 }
 .card {
     height: 25rem;
@@ -94,8 +88,20 @@ span{
     border-top-left-radius:45px;
 
 }
+.internaldiv > P{
+    font-size: 21px;
+    line-height: 30px;
+    padding-top: 66px;
+}
+.internaldiv2 > P{
+    font-size: 47px !important;
+    line-height: 51px !important;
+    padding-top: 28px !important;
+}
+
 
       </style>
+     
     <!-- Requitransparent meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -116,14 +122,14 @@ span{
                    <div class="row">
                        <div class="col-12 col3">
                            <div class="internaldiv">
-                               <p>Aer <br> Room Freshener <br>Violet 300ML</p>
+                               <!-- <p>Aer <br> Room Freshener <br>Violet 300ML</p> -->
                            </div>
                        </div>
                    </div>
                    <div class="row">
                     <div class="col-12 col4">
                         <div class="internaldiv2">
-                            <p class="offer">Buy 1 <br> Get 1 <br> <span>Free</span> </p>
+                            <!-- <p class="offer">Buy 1 <br> Get 1 <br> <span>Free</span> </p> -->
                         </div>
                     </div>
                 </div>
@@ -145,16 +151,20 @@ span{
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <script>
-          var demo = {"name":"abhay","lname":"mishra","email":"abhi.mishra@gmail.com"}
+        //   var demo = {"name":"abhay","lname":"mishra","email":"abhi.mishra@gmail.com"}
 
-        var getUrl = window.location.search.slice(1).replace(/=/g,'":"').replace(/&/g,'","')
+        var getUrl = window.location.search.slice(1).replace(/%20/g,' ').replace(/=/g,'":"').replace(/&/g,'","')
+
+
         var getUrl =  '{"'  + getUrl + '"}'
         var json = JSON.parse(getUrl)
-        console.log(json.img)
+        console.log(json.title)
         
 
        function fun(){
     $(".vertical").append("<img src='" + json.img + "' / >");
+    $(".internaldiv").append("<p>" + json.title + "</p>");
+    $(".internaldiv2").append("<p>" + json.offer + "</p>");
                  
 };
 
