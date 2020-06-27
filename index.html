@@ -1,6 +1,101 @@
 <!doctype html>
 <html lang="en">
   <head>
+      <style>
+          .container{
+    width: 500px !important;
+    height: 500px;
+    border:20px solid transparent;
+    background: rgb(9,195,196);
+    background: linear-gradient(90deg, rgba(9,195,196,1) 7%, 
+    rgba(22,142,173,1) 51%, rgba(0,212,255,1) 81%);
+}
+.upperrow {
+    background-color: transparent;
+    
+}
+.upperrow > div{
+    height: 461px;
+ border:10px solid transparent;
+ width: 220px;
+}
+
+.col2{
+    background-color: transparent;
+    border-bottom-left-radius: 45px;
+    border-top-left-radius: 45px;
+    height: 450px;
+}
+.col3{
+    margin-top: -6px;
+    height: 228px;
+    background-color: white;
+    border-top-right-radius: 45px;
+    border-bottom: 10px solid transparent;
+ }
+ .internaldiv{
+     background: rgb(9,195,196);
+    background: linear-gradient(90deg, rgba(9,195,196,1) 7%, 
+    rgba(22,142,173,1) 51%, rgba(0,212,255,1) 81%);
+    border-top-right-radius: 45px;
+    height: 210px;
+    margin-top: 12px;
+ }
+.col4{
+    height: 228px;
+    background-color: white;
+    border-bottom-right-radius: 45px;
+    border-top: 10px solid transparent ;
+}
+.internaldiv2{
+ background: rgb(9,195,196);
+    background: linear-gradient(90deg, rgba(9,195,196,1) 7%, 
+    rgba(22,142,173,1) 51%, rgba(0,212,255,1) 81%);
+    border-bottom-right-radius: 45px;
+    height: 210px;
+    margin-top: -5px;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 66px;
+    color: yellow;
+}
+.offer{
+    font-size: 38px;
+    line-height: 41px;
+    padding-top: 36px !important;
+}
+span{
+    font-size: 55px;
+}
+.card {
+    height: 25rem;
+    width: 25rem;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+.card img {
+    top: 50%;
+    left: 58% !important;
+    position: relative;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+}
+.card.vertical {
+    height: 25rem;
+    width: 15rem;
+}
+
+
+.card.vertical {
+    height: 100%;
+    width: 100%;
+}
+      </style>
     <!-- Requitransparent meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +108,7 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body onload="fun()">
     <section>
         <div class="container">
             <div class="row upperrow">
@@ -33,15 +128,36 @@
                     </div>
                 </div>
                 </div>
-                <div class="col-md-6 col2"> <img src="./taskImg/1.1.jpg" alt=""></div>
+                <div class="col-md-6 col2">
+                    <div class="card vertical img-wrapper">
+                     </div>
+                </div>
             </div>
         </div>
     </section>
+
+<div id="id"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+          var demo = {"name":"abhay","lname":"mishra","email":"abhi.mishra@gmail.com"}
+
+        var getUrl = window.location.search.slice(1).replace(/=/g,'":"').replace(/&/g,'","')
+        var getUrl =  '{"'  + getUrl + '"}'
+        var json = JSON.parse(getUrl)
+        console.log(json.img)
+        
+
+       function fun(){
+    $(".vertical").append("<img src='" + json.img + "' / >");
+                 
+};
+     </script>
+    </script>
   </body>
 </html>
